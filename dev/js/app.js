@@ -2,12 +2,7 @@
 
 var app = angular.module("monsterApp", ["ngResource", "ngRoute"]);
 
-// app.config([ "$httpProvider", "$locationProvider", function($httpProvider, $locationProvider){
-//   $locationProvider.html5Mode(true);
-//   $locationProvider.hashPrefix('!');
-// }]);
-
-app.config(function($routeProvider){
+app.config(function($routeProvider, $locationProvider){
   $routeProvider
     .when("/", {
       templateUrl : 'views/dashboard.html',
@@ -16,4 +11,6 @@ app.config(function($routeProvider){
     .otherwise({
       redirectTo: "/"
     });
+  $locationProvider.html5Mode(true);
+  $locationProvider.hashPrefix('!');
 });

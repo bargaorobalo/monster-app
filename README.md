@@ -17,12 +17,22 @@ Install all npm depencencies:
 
 
 ## Build and run the distribution version
--- grunt task to ...
+    grunt engine:production:start
+
+### Verifiy W3C HTML5 Validation
+This task generates a validation-report.json to check for the errors
+    grunt validate
+
 
 ## Tasks runner
 For a fast development, here goes a few shortcut to automatized tasks. This is a time killer feature. Run it on Command Line Interface
+
 ### Running the development env
     grunt engine:dev:start
+
+### Running the Spec Runner
+    grunt test:start
+
 
 Plus: If you open the `Gruntfile.js` file, you'll find wonders and useful tasks.
 
