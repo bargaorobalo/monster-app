@@ -9,7 +9,7 @@
 
 (function () {
   "use strict";
-  app.controller("dashboardController", ['$scope', function($scope) {
+  app.controller("dashboardController", ["$scope", "dashboardService", function($scope, dashboardService) {
 
     /**
      * @ngdoc method
@@ -20,7 +20,28 @@
      * graphics and status board.
      */
     $scope.init = function(){
-      $scope.appName = "Monster App";
+      $scope.getAppList();
+    };
+
+    /**
+     * @ngdoc method
+     * @name getAppList
+     * @methodOf $dashboardController
+     * @description
+     * Consult the service to get list of app
+     * @results {object} list of apps
+     */
+    $scope.getAppList = function(){
+      $scope.appList = [];
+      dashboardService.getAppList().then(function(result){
+        for (var i = result.data.length - 1; i >= 0; i--) {
+          if(result.data[i].isActive === true){
+            $scope.appList.push(result.data[i]);
+          }
+        }
+      },function(doh){
+        console.log(doh);
+      });
     };
 
   }]);
