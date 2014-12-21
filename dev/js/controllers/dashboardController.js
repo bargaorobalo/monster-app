@@ -44,5 +44,25 @@
       });
     };
 
+    /**
+     * @ngdoc method
+     * @name getCloneUrl
+     * @methodOf $dashboardController
+     * @description
+     * Consult the service to get the clone URL, but it will return error
+     * @results {object} ERROR
+     */
+    $scope.getCloneUrl = function(){
+      $scope.appList = [];
+      dashboardService.getCloneUrl().then(function(result){
+        console.info("RESULT: ",result);
+      },function(doh){
+        if(doh.status !== 200){
+          alert(doh.data.msg);
+        }
+
+      });
+    };
+
   }]);
 }());

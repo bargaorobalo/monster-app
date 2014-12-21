@@ -29,7 +29,10 @@ describe('monsterApp', function () {
           expect(scope.init).not.toBeUndefined();
       });
       it('should (method "getAppList") not to be undefined', function () {
-          expect(scope.init).not.toBeUndefined();
+          expect(scope.getAppList).not.toBeUndefined();
+      });
+      it('should (method "getCloneUrl") not to be undefined', function () {
+          expect(scope.getCloneUrl).not.toBeUndefined();
       });
   });
 
@@ -41,6 +44,10 @@ describe('monsterApp', function () {
 
     it('should have an getAppList function', function () {
       expect(angular.isFunction(service.getAppList)).toBe(true);
+    });
+
+    it('should have an getCloneUrl function', function () {
+      expect(angular.isFunction(service.getCloneUrl)).toBe(true);
     });
 
   });
