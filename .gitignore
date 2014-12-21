@@ -1,0 +1,12 @@
+# Mac OS
+.DS_Store
+
+# NPM
+npm-debug.log
+node_modules
+.tmp
+
+#Project
+validation-report.json
+validation-status.json
+css/
