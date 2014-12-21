@@ -19,7 +19,7 @@ NG_DOCS={
       "type": "service",
       "moduleName": "$dashboardService",
       "shortDescription": "This service communicate with server to get app list",
-      "keywords": "$dashboardservice $scope api app communicate getapplist getcloneurl list server service"
+      "keywords": "$dashboardservice $scope api app communicate list server service"
     },
     {
       "section": "api",

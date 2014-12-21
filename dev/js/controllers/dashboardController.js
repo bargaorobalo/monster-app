@@ -29,7 +29,7 @@
      * @methodOf $dashboardController
      * @description
      * Consult the service to get list of app
-     * @results {object} list of apps
+     * @returns {object} list of apps
      */
     $scope.getAppList = function(){
       $scope.appList = [];
@@ -50,7 +50,7 @@
      * @methodOf $dashboardController
      * @description
      * Consult the service to get the clone URL, but it will return error
-     * @results {object} ERROR
+     * @returns {object} ERROR 500
      */
     $scope.getCloneUrl = function(){
       $scope.appList = [];

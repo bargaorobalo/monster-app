@@ -5,8 +5,6 @@
  *
  * @description
  * This service communicate with server to get app list
- * @returns {object} getAppList
- * @returns {object} getCloneUrl
  */
 
 (function () {
