@@ -51,13 +51,15 @@ module.exports = function(grunt) {
     clean: {
       production: {
         src: ["<%= productionDir %>/js/monsterapp.js",
-        "<%= productionDir %>/test"]
+              "<%= productionDir %>/test",
+              "<%= productionDir %>/css/default.css"]
       }
     },
     copy: {
       index: {
         files: [
           {src: ["<%= devDir %>/index.html"], dest: "<%= productionDir %>/index.html", filter: "isFile"},
+          {src: ["<%= devDir %>/css/default.css"], dest: "<%= productionDir %>/css/default.css", filter: "isFile"},
           {expand: true, cwd:"<%= devDir %>/views/" , src: ["**"], dest: "<%= productionDir %>/views/"}
         ]
       }
@@ -89,9 +91,31 @@ module.exports = function(grunt) {
     },
     watch: {
       livereload: {
-        options: { livereload: true },
+        options: {
+          livereload: true,
+          spawn: false,
+        },
         files: ["<%= devDir %>/**/*"],
+        tasks: ["jshint", "less"]
       },
+    },
+    jshint: {
+
+      all: ["<%= devDir %>/js/**/*.js"]
+    },
+    less: {
+      development: {
+        files: {
+          "<%= devDir %>/css/default.css": "<%= devDir %>/less/monsterapp.less"
+        }
+      }
+    },
+    cssmin: {
+      production: {
+        files: {
+          "<%= productionDir %>/css/default.min.css": "<%= devDir %>/css/default.css"
+        }
+      }
     }
   });
 
@@ -107,9 +131,10 @@ module.exports = function(grunt) {
   grunt.registerTask("build:production", [
                                           "concat:production",
                                           "uglify:production",
-                                          "clean:production",
                                           "copy:index",
                                           "usemin",
                                           "htmlmin",
+                                          "cssmin",
+                                          "clean:production",
                                           "validation"]);
 };

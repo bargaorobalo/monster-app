@@ -1,8 +1,10 @@
-"use strict";
-app.controller("dashboardController", ['$scope', function($scope) {
+(function () {
+  "use strict";
+  app.controller("dashboardController", ['$scope', function($scope) {
 
-  $scope.init = function(){
-    $scope.appName = "Monster App";
-  };
+    $scope.init = function(){
+      $scope.appName = "Monster App";
+    };
 
-}]);
+  }]);
+}());
