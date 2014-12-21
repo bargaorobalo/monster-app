@@ -53,7 +53,6 @@
      * @returns {object} ERROR 500
      */
     $scope.getCloneUrl = function(){
-      $scope.appList = [];
       dashboardService.getCloneUrl().then(function(result){
         console.info("RESULT: ",result);
       },function(doh){
