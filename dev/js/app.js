@@ -1,8 +1,14 @@
 var app = angular.module("monsterApp", ["ngResource", "ngRoute"]);
 
+/**
+ * @ngdoc overview
+ * @name app
+ *
+ * @description
+ * MonsterApp Application is a system monitor.
+ */
 (function(){
   "use strict";
-
   app.config(function($routeProvider, $locationProvider){
     $routeProvider
       .when("/", {

@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-copy": "^0.6.0",
     "grunt-contrib-csslint": "^0.3.1",
     "grunt-contrib-cssmin": "^0.10.0",
@@ -36,6 +35,7 @@
     "load-grunt-tasks": "~1.0.0",
     "grunt-contrib-htmlmin": "~0.3.0",
     "grunt-html-validation": "~0.1.18",
-    "grunt-contrib-less": "~0.12.0"
+    "grunt-contrib-less": "~0.12.0",
+    "grunt-ngdocs": "~0.2.6"
   }
 }

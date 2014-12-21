@@ -33,6 +33,9 @@ For a fast development, here goes a few shortcut to automatized tasks. This is a
 ### Running the Spec Runner
     grunt test:start
 
+### Seeing the documentation
+    grunt generate:documentation
+
 
 Plus: If you open the `Gruntfile.js` file, you'll find wonders and more useful tasks.
 
