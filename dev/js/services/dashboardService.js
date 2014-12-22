@@ -11,12 +11,16 @@
   "use strict";
   app.factory("dashboardService", ["$http", function($http) {
     return {
-      getAppList: function(){
+      getAppList: function() {
         var url = "http://demo2177885.mockable.io/apps";
         return $http.get(url);
       },
-      getCloneUrl: function(){
+      getCloneUrl: function() {
         var url = "http://demo2177885.mockable.io/error";
+        return $http.get(url);
+      },
+      getServerInfo: function(serverName) {
+        var url = "http://demo2177885.mockable.io/"+serverName;
         return $http.get(url);
       }
     };

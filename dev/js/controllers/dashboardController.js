@@ -53,7 +53,6 @@
      * @returns {object} ERROR 500
      */
     $scope.getCloneUrl = function(){
-      $scope.appList = [];
       dashboardService.getCloneUrl().then(function(result){
         console.info("RESULT: ",result);
       },function(doh){
@@ -63,6 +62,34 @@
 
       });
     };
+
+
+    /**
+     * @ngdoc method
+     * @name getCloneUrl
+     * @methodOf $dashboardController
+     * @description
+     * Grab server's data from service
+     * @param {string} serverName Servers name
+     * @returns {object} Data of server
+     */
+    $scope.getServerInfo = function(serverName){
+      dashboardService.getServerInfo(serverName).then(function(result){
+        console.info("RESULT: ",result);
+        if(serverName === "web1app"){
+          $scope.web1App = [];
+          $scope.web1App.push(result.data[0].stats[0].value+"%");
+          $scope.web1App.push(result.data[1].stats[0].value+"%");
+        }else{
+          $scope.db1lucy = [];
+          $scope.db1lucy.push(result.data[0].stats[0].value+"%");
+          $scope.db1lucy.push(result.data[1].stats[0].value+"%");
+        }
+      },function(doh){
+        console.log(doh);
+      });
+    };
+
 
   }]);
 }());

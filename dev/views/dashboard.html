@@ -9,7 +9,7 @@
 </div>
 
 <section class="container monitors">
-  <article class=" col-sm-4 col-md-3 col-lg-2">
+  <article class=" col-sm-4 col-md-3 col-lg-2" ng-init="getServerInfo('web1app')">
     <h5 class="text-center">Web1 app</h5>
     <div class="row">
       <div class="col-sm-1 col-md-2 text-center">
@@ -20,8 +20,8 @@
           CPU
         </div>
         <div class="col-md-9">
-          <div class="progress ">
-             <div class="progress-bar progress-bar-success" role="progressbar" style="width: 30%;"></div>
+          <div class="progress" >
+             <div class="progress-bar progress-bar-success" role="progressbar" ng-style="{'width': web1App[0]}"></div>
           </div>
         </div>
         <div class="col-md-3">
@@ -29,7 +29,7 @@
         </div>
         <div class="col-md-9">
           <div class="progress ">
-             <div class="progress-bar progress-bar-success" role="progressbar" style="width: 10%;"></div>
+             <div class="progress-bar progress-bar-success" role="progressbar" ng-style="{'width': web1App[1]}"></div>
           </div>
         </div>
       </div>
@@ -37,7 +37,7 @@
     <p class="text-center">MANAGE<span class="caret"></span></p>
   </article>
 
-  <article class=" col-sm-4 col-md-3 col-lg-2">
+  <article class=" col-sm-4 col-md-3 col-lg-2" ng-init="getServerInfo('db1lucy')">
     <h5 class="text-center">DB1 - Lucy</h5>
     <div class="row">
       <div class="col-sm-1 col-md-2 text-center">
@@ -48,8 +48,8 @@
           CPU
         </div>
         <div class="col-md-9">
-          <div class="progress ">
-             <div class="progress-bar progress-bar-success" role="progressbar" style="width: 30%;"></div>
+          <div class="progress" >
+             <div class="progress-bar progress-bar-success" role="progressbar" ng-style="{'width': db1lucy[0]}"></div>
           </div>
         </div>
         <div class="col-md-3">
@@ -57,7 +57,7 @@
         </div>
         <div class="col-md-9">
           <div class="progress ">
-             <div class="progress-bar progress-bar-success" role="progressbar" style="width: 10%;"></div>
+             <div class="progress-bar progress-bar-success" role="progressbar" ng-style="{'width': db1lucy[1]}"></div>
           </div>
         </div>
       </div>
