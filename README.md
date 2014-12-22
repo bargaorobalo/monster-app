@@ -12,7 +12,7 @@ Interface to get server performance metrics
 
 Clone the repository to your environment:
 
-    git clone https://github.com/bargaorobalo/challenge-javascript.git
+    git clone https://github.com/bargaorobalo/monster-app.git
 
 Install all npm depencencies:
 
