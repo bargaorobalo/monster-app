@@ -10,4 +10,3 @@ node_modules
 validation-report.json
 validation-status.json
 css/
-dist/
