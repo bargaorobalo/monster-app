@@ -1,4 +1,4 @@
-var app = angular.module("monsterApp", ["ngResource", "ngRoute"]);
+var app = angular.module("monsterApp", [ "ngResource", "ngRoute", "LocalStorageModule"]);
 
 /**
  * @ngdoc overview
@@ -9,16 +9,17 @@ var app = angular.module("monsterApp", ["ngResource", "ngRoute"]);
  */
 (function(){
   "use strict";
-  app.config(function($routeProvider, $locationProvider){
+  app.config(function($routeProvider, $locationProvider, localStorageServiceProvider){
+    localStorageServiceProvider.setPrefix("monsterApp");
     $routeProvider
       .when("/", {
-        templateUrl : 'views/dashboard.html',
-        controller  : 'dashboardController'
+        templateUrl : "views/dashboard.html",
+        controller  : "dashboardController"
       })
       .otherwise({
         redirectTo: "/"
       });
     $locationProvider.html5Mode(true);
-    $locationProvider.hashPrefix('!');
+    $locationProvider.hashPrefix("!");
   });
 })();
