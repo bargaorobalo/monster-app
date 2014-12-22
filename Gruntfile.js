@@ -43,7 +43,8 @@ module.exports = function(grunt) {
     concat: {
       production: {
         src: ["<%= devDir %>/js/*.js",
-              "<%= devDir %>/js/controllers/*.js"],
+              "<%= devDir %>/js/controllers/*.js",
+              "<%= devDir %>/js/services/*.js"],
         dest: "<%= productionDir %>/js/monsterapp.js"
       }
     },

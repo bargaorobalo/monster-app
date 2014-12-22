@@ -70,7 +70,7 @@
      * @methodOf $dashboardController
      * @description
      * Grab server's data from service
-     * @param {string} Server's name
+     * @param {string} serverName Servers name
      * @returns {object} Data of server
      */
     $scope.getServerInfo = function(serverName){

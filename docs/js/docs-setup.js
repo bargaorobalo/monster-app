@@ -10,7 +10,7 @@ NG_DOCS={
       "type": "controller",
       "moduleName": "$dashboardController",
       "shortDescription": "This controller handle with all application data",
-      "keywords": "$dashboardcontroller $scope api app application apps board clone consult controller dashboard data error getapplist getcloneurl graphics handle init initialize list method return service status url"
+      "keywords": "$dashboardcontroller $scope api app application apps board clone consult controller dashboard data error getapplist getcloneurl grab graphics handle init initialize list method return server servername servers service status url"
     },
     {
       "section": "api",
