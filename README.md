@@ -6,7 +6,6 @@ Interface to get server performance metrics
 
 ##Requirements
 * [nodeJS](http://nodejs.org/)
-* [Bower](http://bower.io/)
 * $ npm install -g serve (This dependency needs to be a global)
 
 ##How to install
