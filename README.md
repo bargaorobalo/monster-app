@@ -33,12 +33,15 @@ For a fast development, here goes a few shortcut to automatized tasks. This is a
 
 ### Running the development env
     grunt engine:dev:start
+    Go to http://localhost:3000
 
 ### Running the Spec Runner
     grunt test:start
+    Go to http://localhost:3000/test
 
 ### Seeing the documentation
     grunt generate:documentation
+    The google chrome will open automatically, if not: http://localhost:3000
 
 
 Plus: If you open the `Gruntfile.js` file, you'll find wonders and more useful tasks.
